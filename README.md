@@ -8,7 +8,7 @@ Vous pouvez trouver une présentation détaillée de notre projet ici: [presenta
 
 **Rapport du projet**:
 
-Vous pouvez trouver un rapport détaillée de notre projet ici: [rapport]([https://docs.google.com/document/d/13ypBi9obiJVGKjC5utCy5b7WqdWiJZcH/edit?usp=drive_link&ouid=108036969993817625850&rtpof=true&sd=true](https://drive.google.com/file/d/1NnwbS2Cmsq8mbPGc3mr9EkuHdylDrnzF/view?usp=drive_link))
+Vous pouvez trouver un rapport détaillée de notre projet ici: [rapport](https://drive.google.com/file/d/1NnwbS2Cmsq8mbPGc3mr9EkuHdylDrnzF/view?usp=drive_link)
 
 **Le repo du codeur**: Vous pouvez récupérer le code créé par le codeur depuis son dépôt ici: [repo codeur](https://github.com/linaIguer/Gestion_Cabinet_Medical/tree/main)
 
