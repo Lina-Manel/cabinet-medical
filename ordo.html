@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordonnance</title>
+  <link rel="stylesheet" href="Fichier Patient.css">
+</head>
+<body>
+  <div class="menu-container">
+    <div class="menu-btn" id="menu-btn">
+      &#9776;
+    </div>
+    <div class="menu-slide" id="menu-slide">
+      <a id="Home" href="cabinet.html">Home</a>
+      <a id="Rendez-vous" href="Rendez-Vous.html">Rendez-vous</a>
+      <a id="Dossier-médical" href="Dossier Médical.html">Dossier médical</a>
+      <a id="Consultation" href="Consultation.html">Consultation</a>
+    </div>
+  </div>
+  <div class="background">
+    <img src="back1.jpg" alt="Background image">
+  </div>
+  <div class="container">
+    <div class="patient-card">
+      <h2>Ordonnance</h2>
+      <form>
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="prenom">Prénom:</label>
+        <input type="text" id="prenom" name="prenom" required>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="medicament">Médicament:</label>
+        <textarea id="medicament" name="medicament" rows="3" required></textarea>
+
+        <label for="dosage">Dosage:</label>
+        <textarea id="dosage" name="dosage" rows="2" required></textarea>
+
+        <label for="periode">Période:</label>
+        <textarea id="periode" name="periode" rows="2" required></textarea>
+
+        <div class="button-container">
+          <button type="submit">Enregistrer</button>
+          <button type="button" onclick="window.print()">Imprimer</button>
+          <button type="button" onclick="window.location.reload()">Actualiser</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menuSlide = document.getElementById('menu-slide');
+
+    menuBtn.addEventListener('click', function() {
+      menuSlide.classList.toggle('active');
+    });
+
+    menuSlide.addEventListener('click', function() {
+      menuSlide.classList.toggle('active');
+    });
+
+    const HomeButton = document.getElementById("Home");
+    const appointmentButton = document.getElementById("Rendez-vous");
+    const medicalRecordButton = document.getElementById("Dossier-médical");
+    const consultationButton = document.getElementById("Consultation");
+
+    HomeButton.addEventListener("click", () => {
+      window.location.href = "cabinet.html"; // Redirect to patient file scene
+    });
+
+    appointmentButton.addEventListener("click", () => {
+      window.location.href = "Rendez-Vous.html"; // Redirect to appointment scene
+    });
+
+    medicalRecordButton.addEventListener("click", () => {
+      window.location.href = "Dossier Médical.html"; // Redirect to medical record scene
+    });
+
+    consultationButton.addEventListener("click", () => {
+      window.location.href = "Consultation.html"; // Redirect to consultation scene
+    });
+  </script>
+</body>
+</html>

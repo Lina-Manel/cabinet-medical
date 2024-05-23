@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche Patient</title>
+  <link rel="stylesheet" href="Dossier Médical.css">
+</head>
+<body>
+  <div class="menu-container">
+    <div class="menu-btn" id="menu-btn">
+      &#9776; </div>
+    <div class="menu-slide" id="menu-slide">
+      <a id="Home" href="cabinet.html">Home</a>
+      <a id="Rendez-vous" href="Rendez-Vous.html">Rendez-vous</a>
+      <a id="Dossier-médical" href="Dossier Médical.html">Dossier médical</a>
+      <a id="Consultation" href="Consultation.html">Consultation</a>
+    </div>
+  </div>
+  <div class="background">
+    <img src="back1.jpg" alt="Background image">
+  </div>
+  <div class="container">
+    <div class="patient-card">
+      <h2>Fiche Patient</h2>
+      <form>
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="prenom">Prénom:</label>
+        <input type="text" id="prenom" name="prenom" required>
+
+        <!-- Bouton de recherche -->
+        <button type="button">Recherche</button>
+
+        <!-- Zones d'écriture pour le dossier médical -->
+        <h3>Dossier Médical</h3>
+        
+        <label for="medicaments">Médicaments:</label>
+        <input type="text" id="medicaments" name="medicaments">
+
+        <label for="dosage">Dosage:</label>
+        <input type="text" id="dosage" name="dosage">
+
+        <label for="periode_prise">Période de prise:</label>
+        <input type="text" id="periode_prise" name="periode_prise">
+
+        <label for="observation_chirurgicale">Observation chirurgicale:</label>
+        <textarea id="observation_chirurgicale" name="observation_chirurgicale" rows="4"></textarea>
+
+        <label for="observation_medicale">Observation médicale:</label>
+        <textarea id="observation_medicale" name="observation_medicale" rows="4"></textarea>
+
+        <!-- Bouton pour enregistrer -->
+        <button type="submit">Enregistrer</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menuSlide = document.getElementById('menu-slide');
+
+    menuBtn.addEventListener('click', function() {
+      menuSlide.classList.toggle('active');
+    });
+
+    menuSlide.addEventListener('click', function() {
+      menuSlide.classList.toggle('active');
+    });
+
+    const HomeButton = document.getElementById("Home");
+    const appointmentButton = document.getElementById("Rendez-vous");
+    const medicalRecordButton = document.getElementById("Dossier-médical");
+    const consultationButton = document.getElementById("Consultation");
+
+    HomeButton.addEventListener("click", () => {
+      window.location.href = "cabinet.html"; // Redirige vers la scène du dossier patient
+    });
+
+    appointmentButton.addEventListener("click", () => {
+      window.location.href = "Rendez-Vous.html"; // Redirige vers la scène des rendez-vous
+    });
+
+    medicalRecordButton.addEventListener("click", () => {
+      window.location.href = "Dossier Médical.html"; // Redirige vers la scène du dossier médical
+    });
+
+    consultationButton.addEventListener("click", () => {
+      window.location.href = "Consultation.html"; // Redirige vers la scène des consultations
+    });
+  </script>
+</body>
+</html>

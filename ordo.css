@@ -1,0 +1,141 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.menu-btn {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu-slide {
+    display: none;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2737550a; /* Couleur de fond */
+    border-right: 1px solid #ccc; /* Bordure à droite */
+    padding-top: 50px; /* Espacement en haut */
+    transition: display 0.5s;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 9;
+}
+
+
+.menu-slide.active {
+    display: block; /* Affiche le menu lorsqu'il a la classe "active" */
+    width: 15%; /* Ajuste la largeur du menu selon votre préférence */
+}
+
+
+.menu-slide a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: block;
+    transition: background-color 0.3s; /* Animation de changement de couleur de fond */
+}
+
+.menu-slide a:hover {
+    background-color: #f4f4f4; /* Couleur de fond lorsqu'il est survolé */
+}
+
+.menu-slide.inactive {
+    display: none;
+  }
+  
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Met l'arrière-plan derrière le contenu */
+    overflow: hidden;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7; /* Rend l'image de fond légèrement transparente */
+}
+
+.container {
+    width: 132%; /* This makes the container take half of the page */
+    height: 100%; /* Ensure the container takes full height */
+    margin: 0;
+    position: fixed; /* Fixes the container in place */
+    right: 0; /* Aligns the container to the right */
+    top: 0; /* Aligns the container to the top */
+    display: flex; /* Enables flex layout */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+}
+
+.patient-card {
+    background-color: #27375582;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0 , 0.1);
+    width: 90%; /* Adjust width as needed */
+    max-width: 550px; /* Ensure it doesn't grow too wide */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #273755;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #273755;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+

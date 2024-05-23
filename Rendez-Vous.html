@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rendez-Vous</title>
+  <link rel="stylesheet" href="Rendez-Vous.css">
+</head>
+<body>
+  <div class="menu-container">
+    <div class="menu-btn" id="menu-btn">&#9776;</div>
+    <div class="menu-slide" id="menu-slide">
+      <a id="Home" href="cabinet.html">Home</a>
+      <a id="Rendez-vous" href="Rendez-Vous.html">Rendez-vous</a>
+      <a id="Dossier-médical" href="Dossier Médical.html">Dossier médical</a>
+      <a id="Consultation" href="Consultation.html">Consultation</a>
+    </div>
+  </div>
+  <div class="background">
+    <img src="back1.jpg" alt="Background image">
+  </div>
+  <div class="container">
+    <div class="left-panel">
+      <div class="appointment-card">
+        <h2>Fiche Rendez-Vous</h2>
+        <form class="appointment-form">
+          <div class="input-group">
+            <label for="patient-id">ID Patient:</label>
+            <input type="text" id="patient-id" name="patient-id" required>
+          </div>
+          <div class="input-group">
+            <label for="date-rdv">Date RDV:</label>
+            <input type="date" id="date-rdv" name="date-rdv" required>
+          </div>
+          <div class="input-group">
+            <label for="heure-rdv">Heure RDV:</label>
+            <input type="time" id="heure-rdv" name="heure-rdv" required>
+          </div>
+          <div class="input-group">
+            <label for="status">Status:</label>
+            <input type="text" id="status" name="status" required>
+          </div>
+          <div class="button-container">
+            <button type="button" id="add-btn">Ajouter</button>
+            <button type="button" id="edit-btn">Modifier</button>
+            <button type="button" id="delete-btn">Supprimer</button>
+            <button type="button" id="refresh-btn">Actualiser</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <div class="search-card-container">
+        <div class="search-card">
+          <h2>Recherche Rendez-Vous</h2>
+          <div class="input-group">
+            <label for="search-nom">Nom:</label>
+            <input type="text" id="search-nom" name="search-nom">
+          </div>
+          <div class="input-group">
+            <label for="search-prenom">Prénom:</label>
+            <input type="text" id="search-prenom" name="search-prenom">
+          </div>
+          <div class="input-group">
+            <label for="search-date">Date:</label>
+            <input type="date" id="search-date" name="search-date">
+          </div>
+          <button id="search-btn">Recherche</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Le reste du script reste inchangé
+  </script>
+</body>
+</html>

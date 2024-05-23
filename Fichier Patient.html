@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche Patient</title>
+  <link rel="stylesheet" href="Fichier Patient.css">
+</head>
+<body>
+  <div class="menu-container">
+    <div class="menu-btn" id="menu-btn">
+      &#9776; </div>
+    <div class="menu-slide" id="menu-slide">
+      <a id="Home" href="cabinet.html">Home</a>
+      <a id="Rendez-vous" href="Rendez-Vous.html">Rendez-vous</a>
+      <a id="Dossier-médical" href="Dossier Médical.html">Dossier médical</a>
+      <a id="Consultation" href="Consultation.html">Consultation</a>
+    </div>
+  </div>
+  <div class="background">
+    <img src="back1.jpg" alt="Background image">
+  </div>
+  <div class="container">
+    <div class="patient-card">
+      <h2>Fiche Patient</h2>
+      <form>
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="prenom">Prénom:</label>
+        <input type="text" id="prenom" name="prenom" required>
+
+        <label for="numéro_téléphone">Numéro de téléphone:</label>
+        <input type="tel" id="numéro_téléphone" name="numéro_téléphone" required>
+
+        <label for="sexe">Sexe:</label>
+        <select id="sexe" name="sexe" required>
+          <option value="homme">Homme</option>
+          <option value="femme">Femme</option>
+        </select>
+
+        <label for="adresse">Adresse:</label>
+        <input type="text" id="adresse" name="adresse" required>
+
+        <label for="date_naissance">Date de naissance:</label>
+        <input type="date" id="date_naissance" name="date_naissance" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="assurance">Assuré:</label>
+        <select id="assurance" name="assurance" required>
+          <option value="oui">Oui</option>
+          <option value="non">Non</option>
+        </select>
+
+        <button type="submit">Enregistrer</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menuSlide = document.getElementById('menu-slide');
+
+    menuBtn.addEventListener('click', function() {
+      menuSlide.classList.toggle('active');
+    });
+
+    menuSlide.addEventListener('click', function() {
+      menuSlide.classList.toggle('active');
+    });
+
+    const HomeButton = document.getElementById("Home");
+    const appointmentButton = document.getElementById("Rendez-vous");
+    const medicalRecordButton = document.getElementById("Dossier médical");
+    const consultationButton = document.getElementById("Consultation");
+
+    HomeButton.addEventListener("click", () => {
+      window.location.href = "cabinet.html"; // Redirect to patient file scene
+    });
+
+    appointmentButton.addEventListener("click", () => {
+      window.location.href = "Rendez-Vous.html"; // Redirect to appointment scene
+    });
+
+    medicalRecordButton.addEventListener("click", () => {
+      window.location.href = "Dossier Médical.html"; // Redirect to appointment scene
+    });
+
+    consultationButton.addEventListener("click", () => {
+      window.location.href = "Consultation.html"; // Redirect to appointment scene
+    });
+  </script>
+</body>
+</html>

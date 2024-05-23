@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEDCARE</title>
+  <link rel="stylesheet" href="cabinet.css">
+</head>
+<body>
+  <div class="background">
+    <img src="back1.jpg" alt="Background image">
+  </div>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <img src="logo.jpg" alt="Logo image">
+      </div>
+      <h1>MEDCARE</h1>
+    </header>
+    <div class="content">
+      <div class="buttons">
+        <button id="patient-button">Fichier Patient</button>
+        <button id="appointment-button">Rendez-Vous</button>
+        <button id="medical-record-button">Dossier Médical</button>
+        <button id="consultation-button">Consultation</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const patientButton = document.getElementById("patient-button");
+    const appointmentButton = document.getElementById("appointment-button");
+    const medicalRecordButton = document.getElementById("medical-record-button");
+    const consultationButton = document.getElementById("consultation-button");
+
+    patientButton.addEventListener("click", () => {
+      window.location.href = "Fichier Patient.html"; // Redirect to patient file scene
+    });
+
+    appointmentButton.addEventListener("click", () => {
+      window.location.href = "Rendez-Vous.html"; // Redirect to appointment scene
+    });
+
+    medicalRecordButton.addEventListener("click", () => {
+      window.location.href = "Dossier Médical.html"; // Redirect to appointment scene
+    });
+
+    consultationButton.addEventListener("click", () => {
+      window.location.href = "Consultation.html"; // Redirect to appointment scene
+    });
+
+    // Add similar event listeners for other buttons
+  </script>
+</body>
+</html>
